@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D71AC2527CFF84800CA7D86 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71AC2427CFF84800CA7D86 /* RemoteImageView.swift */; };
+		4D71AC2727D0032A00CA7D86 /* CatsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71AC2627D0032A00CA7D86 /* CatsImage.swift */; };
 		4DD7EEA427CD0C3C00A2B2BA /* FurryFriendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD7EEA327CD0C3C00A2B2BA /* FurryFriendApp.swift */; };
 		4DD7EEA627CD0C3C00A2B2BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD7EEA527CD0C3C00A2B2BA /* ContentView.swift */; };
 		4DD7EEA827CD0C4300A2B2BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DD7EEA727CD0C4300A2B2BA /* Assets.xcassets */; };
@@ -14,11 +16,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D71AC2427CFF84800CA7D86 /* RemoteImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteImageView.swift; path = "../../../FurryFriends-f58e0e5a187f6622f9ace7c715624cf1e584a120/FurryFriends/Views/Helpers/RemoteImageView.swift"; sourceTree = "<group>"; };
+		4D71AC2627D0032A00CA7D86 /* CatsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsImage.swift; sourceTree = "<group>"; };
 		4DD7EEA027CD0C3C00A2B2BA /* FurryFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurryFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD7EEA327CD0C3C00A2B2BA /* FurryFriendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurryFriendApp.swift; sourceTree = "<group>"; };
 		4DD7EEA527CD0C3C00A2B2BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DD7EEA727CD0C4300A2B2BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DD7EEAA27CD0C4300A2B2BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DD7EEB627CD0E7E00A2B2BA /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,10 +37,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D71AC2327CFF83B00CA7D86 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D71AC2427CFF84800CA7D86 /* RemoteImageView.swift */,
+				4D71AC2627D0032A00CA7D86 /* CatsImage.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4DBBF3BC27CE908200BDECD9 /* FurryFriend */ = {
+			isa = PBXGroup;
+			children = (
+				4DD7EEA327CD0C3C00A2B2BA /* FurryFriendApp.swift */,
+				4D71AC2327CFF83B00CA7D86 /* Helpers */,
+				4DD7EEA227CD0C3C00A2B2BA /* Views */,
+				4DD7EEB127CD0C8000A2B2BA /* Models */,
+				4DD7EEA727CD0C4300A2B2BA /* Assets.xcassets */,
+				4DD7EEA927CD0C4300A2B2BA /* Preview Content */,
+			);
+			path = FurryFriend;
+			sourceTree = "<group>";
+		};
 		4DD7EE9727CD0C3C00A2B2BA = {
 			isa = PBXGroup;
 			children = (
-				4DD7EEA227CD0C3C00A2B2BA /* FurryFriend */,
+				4DBBF3BC27CE908200BDECD9 /* FurryFriend */,
+				4DD7EEB627CD0E7E00A2B2BA /* Contents.json */,
 				4DD7EEA127CD0C3C00A2B2BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,15 +76,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DD7EEA227CD0C3C00A2B2BA /* FurryFriend */ = {
+		4DD7EEA227CD0C3C00A2B2BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4DD7EEA327CD0C3C00A2B2BA /* FurryFriendApp.swift */,
 				4DD7EEA527CD0C3C00A2B2BA /* ContentView.swift */,
-				4DD7EEA727CD0C4300A2B2BA /* Assets.xcassets */,
-				4DD7EEA927CD0C4300A2B2BA /* Preview Content */,
 			);
-			path = FurryFriend;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4DD7EEA927CD0C4300A2B2BA /* Preview Content */ = {
@@ -65,6 +90,13 @@
 				4DD7EEAA27CD0C4300A2B2BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DD7EEB127CD0C8000A2B2BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D71AC2727D0032A00CA7D86 /* CatsImage.swift in Sources */,
 				4DD7EEA627CD0C3C00A2B2BA /* ContentView.swift in Sources */,
 				4DD7EEA427CD0C3C00A2B2BA /* FurryFriendApp.swift in Sources */,
+				4D71AC2527CFF84800CA7D86 /* RemoteImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +311,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +341,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
