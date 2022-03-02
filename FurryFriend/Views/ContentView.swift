@@ -14,7 +14,7 @@ struct ContentView: View {
     // Starts as a transparent pixel – until an address for an animal's image is set
     @State var currentImage = catsImage(file: "https://www.russellgordon.ca/lcs/miscellaneous/transparent-pixel.png")
     @State var currentImageAddedToFavourites: Bool = false
-    @State var favourites: [RemoteImageView] = []
+    @State var favourites: [catsImage] = []
     
     
     // MARK: Computed properties
@@ -29,9 +29,24 @@ struct ContentView: View {
                 Image(systemName: "heart.circle")
                     .padding()
                     .foregroundColor(currentImageAddedToFavourites == true ? .red : .secondary)
+                    .onTapGesture {
+                        if currentImageAddedToFavourites == false{
+                            favourites.append(currentImage)
+                            currentImageAddedToFavourites = true
+                        }
+                    }
+                
                 Spacer()
-                Image(systemName: "x.circle")
+                Button(action:{
+                    
+                    Task {
+                        await loadNewImage()
+                    }
+                }, label: {
+                    Image(systemName: "x.circle")
+                })
                     .padding()
+                
                 
             }
             .frame(width: 40, height: 40)
@@ -41,6 +56,7 @@ struct ContentView: View {
             Spacer()
             HStack{
                 Text("Favourite")
+                    .font(.title2)
                     .padding()
                 Spacer()
                 
@@ -48,12 +64,9 @@ struct ContentView: View {
             }
             
             
-            List{
-                Text("favourite")
-                Text("favourite")
-                Text("favourite")
+            List(favourites, id: \.self) { currentFavourite in
+                Text(currentFavourite.file)
             }
-            
         }
         // Runs once when the app is opened
         .task {
